@@ -17,6 +17,7 @@
 		background-color: rgba(0, 0, 0, .5);
 	}
 }
+
 .main-content > .container {
 	margin-top: 0;
 	padding-bottom: 0;
@@ -31,19 +32,6 @@
 
 .card-content {
 	color: #666;
-}
-.presentation-section {
-	position: relative;
-	z-index: 1;
-	.breadcrumb {
-		margin-left: -12px;
-		.breadcrumb-item {
-			color: #fff;
-		}
-	}
-	h1, h2 {
-		color: #fff;
-	}
 }
 
 .infos-section {
@@ -79,19 +67,6 @@
 			+ .tag {
 				margin-left: .25em;
 			}
-		}
-	}
-}
-
-@media only screen and (max-width: 768px) {
-	.presentation-section {
-		padding: 2rem 1rem 1rem;
-	}
-	.infos-section {
-		height: auto;
-
-		app-destination-gallery {
-			transform: none;
 		}
 	}
 }

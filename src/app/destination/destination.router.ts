@@ -4,9 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { DestinationComponent } from './destination.component';
 import { DestinationResolver } from './destination.resolver';
 
-const routes = [
+const routes: Routes = [
 	{ path: ':id', component: DestinationComponent, resolve: { destination: DestinationResolver }},
-] as Routes;
+];
 
 @NgModule({
 	imports: [

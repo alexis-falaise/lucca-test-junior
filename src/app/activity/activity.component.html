@@ -1,0 +1,18 @@
+<div class="activity main-content" [style.background-image]="bgImg">
+  <div class="container">
+    <div class="grid">
+        <section class="grid-md8 grid-lg7 presentation-section">
+          <nav class="breadcrumb">
+            <a [routerLink]="['/activity']" class="breadcrumb-item">Activités</a>
+            <span class="breadcrumb-item is-active">{{activity.name}}</span>
+          </nav>
+          <h1>{{activity.name}}</h1>
+          <div class="card">
+            <div class="card-content">
+              {{activity.description}}
+            </div>
+          </div>
+        </section>
+    </div>
+  </div>
+</div>

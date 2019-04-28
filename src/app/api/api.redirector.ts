@@ -9,7 +9,6 @@ export class ApiRedirectInterceptor implements HttpInterceptor {
 
 	constructor() { }
 	intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
 		if (req.url.startsWith('/api/')) {
 			const clonedRequest = req.clone({
 				url: `${environment.serverUrl}${req.url}`,

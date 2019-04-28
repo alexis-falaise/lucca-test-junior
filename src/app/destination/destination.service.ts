@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { IDestination } from './destination.model';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+import { IDestination } from './destination.model';
 
 @Injectable()
 export class DestinationService {

@@ -14,7 +14,8 @@
 		<h2>Destinations</h2>
 		<div class="grid">
 			<div class="grid-md4 grid-lg3" *ngFor="let destination of destinations$ | async">
-				<app-destination-thumbnail [destination]="destination"></app-destination-thumbnail>
+				<app-thumbnail [item]="destination" [routerLink]="['/destination', destination.id]"></app-thumbnail>
+				<!-- <app-destination-thumbnail [destination]="destination"></app-destination-thumbnail> -->
 			</div>
 		</div>
 	</section>

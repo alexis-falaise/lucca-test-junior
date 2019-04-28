@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeModule } from './home';
 import { DestinationModule } from './destination';
+import { ActivityModule } from './activity/activity.module';
 import { environment } from '../environments/environment';
 
 const routes = [
 	{ path: 'home', loadChildren: () => HomeModule },
 	{ path: 'destination', loadChildren: () => DestinationModule },
+	{ path: 'activity', loadChildren: () => ActivityModule },
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 ] as Routes;
 

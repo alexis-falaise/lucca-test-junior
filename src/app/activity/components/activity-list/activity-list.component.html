@@ -1,0 +1,10 @@
+<div class="activity-list main-content">
+  <div class="container">
+    <h1>Activités</h1>
+    <div class="grid">
+      <div class="grid-md4 grid-lg-3" *ngFor="let activity of activities">
+        <app-thumbnail [item]="activity" [routerLink]="['/activity', activity.id]"></app-thumbnail>
+      </div>
+    </div>
+  </div>
+</div>
