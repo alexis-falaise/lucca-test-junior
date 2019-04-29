@@ -3,6 +3,8 @@
     <div class="grid">
         <section class="grid-md8 grid-lg7 presentation-section">
           <nav class="breadcrumb">
+            <a [routerLink]="['/destination']" class="breadcrumb-item" *ngIf="destination">Destinations</a>
+            <a [routerLink]="['/destination', destination.id]" *ngIf="destination" class="breadcrumb-item">{{ destination.name }}</a>
             <a [routerLink]="['/activity']" class="breadcrumb-item">Activités</a>
             <span class="breadcrumb-item is-active">{{activity.name}}</span>
           </nav>

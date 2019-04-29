@@ -1,6 +1,12 @@
 <div class="activity-list main-content">
   <div class="container">
-    <h1>Activités</h1>
+    <nav class="breadcrumb">
+      <a [routerLink]="['/home']" class="breadcrumb-item">Accueil</a>
+      <a [routerLink]="['/destination', destination.id]" class="breadcrumb-item" *ngIf="destination">{{ destination.name }}</a>
+      <a [routerLink]="['/activity']" class="breadcrumb-item" *ngIf="destination">Activités</a>
+    </nav>
+    <h1>Activités {{ destination ? 'à ' + destination.name : '' }}</h1>
+    <button class="button" (click)="resetDestination()" *ngIf="destination">Voir toutes les activités</button>
     <div class="grid">
       <div class="grid-md4 grid-lg-3" *ngFor="let activity of activities">
         <app-thumbnail [item]="activity" [routerLink]="['/activity', activity.id]"></app-thumbnail>
